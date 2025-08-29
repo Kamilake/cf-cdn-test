@@ -1,7 +1,8 @@
 {
   "type": "module",
   "dependencies": {
-    "@jsquash/webp": "^1.5.0",
-    "@jsquash/resize": "^2.1.0"
+    "@jsquash/resize": "^2.1.0",
+    "@jsquash/webp": "1.5.0-animated-webp-support",
+    "gifski-wasm": "^2.2.0"
   }
 }
