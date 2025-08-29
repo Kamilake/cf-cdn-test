@@ -16,9 +16,19 @@ export default {
         setTimeout(() => reject(new Error('Request timeout')), PROCESSING_TIMEOUT)
       )
     ]).catch(error => {
-      console.error('Request failed:', error.message);
-      return new Response('Processing timeout or error occurred', { 
-        status: 408,
+      console.error('Request failed:', error);
+      
+      // 상세 오류 정보 반환
+      if (error.message === 'Request timeout') {
+        return new Response('Request processing timeout', { 
+          status: 408,
+          headers: { 'content-type': 'text/plain' }
+        });
+      }
+      
+      // 기타 오류의 경우 상세 메시지 포함
+      return new Response(`Processing error: ${error.message}`, { 
+        status: 500,
         headers: { 'content-type': 'text/plain' }
       });
     });
