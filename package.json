@@ -1,9 +1,7 @@
-// package.json
-// "type": "module" 로 ESM 사용
 {
   "type": "module",
   "dependencies": {
-    "@jsquash/webp": "^1.3.0",
-    "@jsquash/resize": "^1.3.0"
+    "@jsquash/webp": "^1.5.0",
+    "@jsquash/resize": "^2.1.0"
   }
 }
