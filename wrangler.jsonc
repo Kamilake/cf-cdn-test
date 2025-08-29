@@ -1,0 +1,7 @@
+// wrangler.jsonc (권장)
+// WASM 번들이 자동 포함되도록 ESM 사용. 비용/DoW 방지를 위해 CPU 상한도 지정.
+{
+  "main": "src/index.js",
+  "compatibility_date": "2025-08-01",
+  "limits": { "cpu_ms": 100 } // 요청당 최대 100ms CPU (원하면 더 낮춰도 됨)
+}
